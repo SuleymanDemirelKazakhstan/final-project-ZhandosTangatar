@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>createPage</title>
+    <link rel="stylesheet" href="/css/style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id = "logo">
+                InBook
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="#">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Add a book</h2>
+        <form action="/createPage" method = "POST">
+        <div><p>Title</p><input type = "text" name = "title"></div>
+            <div><p>Description</p><textarea rows="8" cols="50" name = "description"></textarea></div>
+            <div><p>Price</p><input type = "text" name = "price"></div>
+            <div><p>Category</p>
+                <select name = "category">
+                    <option value="Fantasy">
+                        Fantasy
+                    </option>
+                    <option value="Romance">
+                        Romance
+                    </option>
+                    <option value="Adventure">
+                        Adventure
+                    </option>
+                    <option value="Thriller">
+                        Thriller
+                    </option>
+                </select>
+            </div>
+            <div><p>Image</p><input type = "file" name = "image"></div>
+            <input type = "submit" value="Add"  id = "add">
+        </form>
+            
+    </main>
+    <footer>
+        <p>WebPage@gmail.com</p>
+    </footer>
+</body>
+</html>

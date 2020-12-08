@@ -78,14 +78,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
 }
 
 .price{
@@ -94,10 +87,6 @@ main{
     border-radius: 10px;
 }
 
-.import:hover{
-    width: 100%;
-    transform: rotate(3deg);
-}
 
 .cards{
     margin-left: 20%;
@@ -131,4 +120,31 @@ main{
 .name{
     color: black;
     text-decoration: none;
+}
+
+.delete{
+    text-align: center;
+    color: #F4F4F4;
+    background-color:  #1A1C20;
+}
+
+
+#adding{
+    width: 200px;
+    height: 350px;
+    margin: 25px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#adding img{
+    width: 200px;
+    height: 310;
+    border-bottom: 2px solid black;
+}
+
+#adding a{
+    height: 20%;
 }
