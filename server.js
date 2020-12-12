@@ -1,26 +1,12 @@
-const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser");
-const router1 = require("./routes/createPage"); 
-const router2 = require("./routes/elementPage");
-const exphbs = require('express-handlebars');
+let url = "https://run.mocky.io/v3/3681eb70-37e8-4b5d-bc32-19e5c4ad0ca4";
 
+console.log("sdasdasdas");
+fetch(url).then(onSucces, onError).then(text => console.log(text));
 
+function onSucces(response){
+    return response.json();
+}
+function onError(error){      
+        console.log(error);
+}
 
-const app = express();
-
-
-
-
-// const hbs = exphbs.create();
-
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
-
-app.use(express.static(path.join(__dirname, '/public')));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(router1);
-app.use(router2);
-
-app.listen(3000);

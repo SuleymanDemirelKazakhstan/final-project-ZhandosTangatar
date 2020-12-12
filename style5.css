@@ -1,10 +1,10 @@
-
 body{
     font-family: 'Itim', cursive;
     background-color:#F0A500;
     margin: 0px;
     padding: 0px;
     height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,8 +51,6 @@ li a:hover{
     transform: rotate(1deg) ;
 }
 
-
-
 #logo{
     margin-left: 30px;
     margin-top: 15px;
@@ -63,7 +61,6 @@ li a:hover{
     border: 2px solid grey;
     border-radius: 5px;
     user-select: none;
-    
 }
 
 #logo:hover{
@@ -72,6 +69,23 @@ li a:hover{
     transform: rotate(1deg) ;
 }
 
+button, input{
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+#Search, #filt{
+    margin-top: 25px;
+    font-size: 20px;
+    
+}
+
+#category{
+    border: 2px solid black;
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+}
 
 footer{
     color: white;
@@ -79,7 +93,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin-top: auto;
 }
 
 main{
@@ -89,37 +103,42 @@ main{
     align-items: center;
 }
 
+.price{
+    text-align: center;
+    background-color: #F4F4F4;
+    border-radius: 10px;
+}
 
-#add{
+.cards{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color:  #CF7500;
+    display: flex;
+    flex-direction: column;
     margin: 25px;
-    font-size: 25px;
-    padding: 3px 20px;
-    width: 100px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+   
 }
 
-input{
+.card img{
+    width: 201px;
+}
+
+.card p{
+    margin: 0px;
     padding: 0px;
-    width: 1000px;
-    font-size: 20px;
+    text-align: center;
 }
 
-#Description{
-    height: 250px;
-}
-
-textarea{
-    width: 1000px;
-    font-size: 20px;
-}
-
-select{
-    font-size: 20px;
-}
-
-main div{
-    width: 1000px;
-}
-
-p{
-    font-size: 25px;
+.name{
+    color: black;
+    text-decoration: none;
 }

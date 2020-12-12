@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Books Shop</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style5.css">
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -11,6 +11,20 @@
             <div id = "logo">
                 InBook
             </div>
+            <div id = "Search">
+                <input type="text" placeholder = "search a book">
+                <button type = "submit" >Search</button>
+            </div>
+                    
+         
+            <div id = "filt">   
+                <button id = "filt_price">filter by price</button>
+                <label>filter by genre</label>
+                <select  id="category">
+                    <option value="Thriller">Thriller</option>
+                    <option value="Fantasy">Fantasy</option>
+            </select>
+            </div>    
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">About us</a></li>
@@ -18,14 +32,16 @@
                 <li><a href="adminPage.html">Admin</a></li>
             </ul>
         </nav>
+
     </header>
     <main>
+      
         <div class = "cards">
-            <div class = "card">
+           <div class = "card">
                 <img src="img/book1.png">
-                <a class = "name" href="elementPage.html">In Search of Lost Time</a>
+                <a class = "name" href="elementPage.html?name='losttime'">In Search of Lost Time</a>
                 <p class="price">10.99$</p>
-            </div>
+            </div> 
             <div class = "card">
                 <img src="img/book1.png">
                 <a class = "name" href="elementPage.html">In Search of Lost Time</a>
