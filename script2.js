@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(queryString);
 let name= urlParams.get('name')
 console.log(name);
 
-let url = "https://run.mocky.io/v3/7ef86aa5-2fc9-4167-ab07-8a9ddab26f3b";
+let url = "https://run.mocky.io/v3/a4049f97-9537-40bb-b915-48b28d7e2d1e";
 
 console.log("sdasdasdas");
 fetch(url).then(onSucces, onError).then(Adding);
@@ -28,10 +28,6 @@ console.log(x)
             img.setAttribute("src", srcImg);
 
             let name = document.createElement("a");
-            let href = "elementPage.html?name=";
-            console.log(newItem[i].queryName);
-            href += `${newItem[i].queryName}`;
-            name.setAttribute("href", href);
             name.setAttribute("class", "name");
             name.innerHTML = newItem[i].name;
 

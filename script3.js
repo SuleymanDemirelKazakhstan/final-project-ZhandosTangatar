@@ -1,4 +1,4 @@
-let url = "https://run.mocky.io/v3/7ef86aa5-2fc9-4167-ab07-8a9ddab26f3b";
+let url = "https://run.mocky.io/v3/a4049f97-9537-40bb-b915-48b28d7e2d1e";
 
 console.log("sdasdasdas");
 fetch(url).then(onSucces, onError).then(Adding);
