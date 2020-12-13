@@ -45,9 +45,64 @@ console.log(x)
     }
 }
 
-{/* <div class = "card">
-    <img src="img/book1.png">
-    <a class = "name" href="elementPage.html">In Search of Lost Time</a>
-    <p class="price">10.99$</p>
-    <a class = "delete">delete</a>
-</div> */}
+let button = document.querySelector("#filt_price");
+
+button.addEventListener("click", filt);
+
+
+function filt(){
+    fetch(url).then(onSucces, onError).then(sort);
+}
+
+function sort(x){
+    console.log("click");
+    let card = document.querySelectorAll(".card");
+    for(c of card)
+        c.parentNode.removeChild(c);
+
+    let newItem = x;
+    let t = [];
+    for(let i = 0; i < newItem.length; i++){
+        t[i] = newItem[i].price;
+    }    
+
+    t.sort();
+
+    console.log(t);
+
+    for(let i = 0; i < t.length ; i++){
+        for(let j = 0; j < newItem.length ; j++)
+          if(t[i] === newItem[j].price){
+            let card = document.createElement("div");
+            card.setAttribute("class", "card");
+    
+            let img = document.createElement("img");
+            let srcImg = newItem[j].image;
+            img.setAttribute("src", srcImg);
+    
+            let name = document.createElement("a");
+            let href = "elementPage.html?name=";
+            console.log(newItem[j].queryName);
+            href += `"${newItem[j].queryName}"`;
+            name.setAttribute("href", href);
+            name.setAttribute("class", "name");
+            name.innerHTML = newItem[j].name;
+    
+            let price = document.createElement("p");
+            price.setAttribute("class", "price");
+            price.innerHTML = newItem[j].price;
+
+            let deleting = document.createElement("a");
+            deleting.setAttribute("class", "delete");
+            deleting.innerHTML = "delete";
+    
+            card.appendChild(img);
+            card.appendChild(name);
+            card.appendChild(price);
+            card.appendChild(deleting);
+            
+            document.querySelector('.cards').appendChild(card);
+            break;
+          }
+    }  
+}
